@@ -1,4 +1,4 @@
-## NEWS APP - Kotlin Coroutines | MVVM | Navigation | Retrofit | RoomDatabase
+## NEWS APP - Kotlin Coroutines | MVVM | Navigation | Retrofit | Room |
 
 ### YouTube Tutorial : 
 
@@ -14,20 +14,20 @@
 #### if you want to use this app, enter your own API key in the Utils class 
 
 ### Breaking News Fragment 
-[](images/breakingnews.png)
+![](images/breakingnews.png)
 
 
 ### Article View Fragment
-[](images/articleview.png)
+![](images/articleview.png)
 
 
 ### Saved News Fragment
-[](images/savednews.png)
+![](images/savednews.png)
 
 
 ### SearchView
-[](images/searchview.png)
+![](images/searchview.png)
 
 
 ### Dialog to Delete
-[](images/dialogtodelete.png)
+![](images/dialogtodelete.png)
