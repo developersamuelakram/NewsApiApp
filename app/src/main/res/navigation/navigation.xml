@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentBreakingNews">
+
+    <fragment
+        android:id="@+id/fragmentBreakingNews"
+        android:name="com.example.newsapiapp.ui.FragmentBreakingNews"
+        android:label="FragmentBreakingNews" >
+        <action
+            android:id="@+id/action_fragmentBreakingNews_to_fragmentArticle"
+            app:destination="@id/fragmentArticle"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentArticle"/>
+        <action
+            android:id="@+id/action_fragmentBreakingNews_to_fragmentSavedNews"
+            app:destination="@id/fragmentSavedNews"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentSavedNews"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentArticle"
+        android:name="com.example.newsapiapp.ui.FragmentArticle"
+        android:label="FragmentArticle" >
+        <action
+            android:id="@+id/action_fragmentArticle_to_fragmentSavedNews"
+            app:destination="@id/fragmentSavedNews"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentSavedNews"/>
+        <action
+            android:id="@+id/action_fragmentArticle_to_fragmentBreakingNews"
+            app:destination="@id/fragmentBreakingNews"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentBreakingNews"/>
+        <argument
+            android:name="article"
+            app:argType="com.example.newsapiapp.db.Article" />
+
+
+        />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSavedNews"
+        android:name="com.example.newsapiapp.ui.FragmentSavedNews"
+        android:label="FragmentSavedNews" >
+        <action
+            android:id="@+id/action_fragmentSavedNews_to_fragmentBreakingNews"
+            app:destination="@id/fragmentBreakingNews" />
+        <action
+            android:id="@+id/action_fragmentSavedNews_to_fragmentArticle"
+            app:destination="@id/fragmentArticle" />
+    </fragment>
+</navigation>

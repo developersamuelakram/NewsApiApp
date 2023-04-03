@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/nowifi"
+        android:visibility="gone"
+
+        android:layout_centerInParent="true"
+        android:id="@+id/noWifi"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NO INTERNET"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/noWifi"
+        android:id="@+id/noWifiText"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/hsv"
+
+        android:layout_marginBottom="15dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/breakingImage"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/breakingnews"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/red"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/businessImage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/business"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/red"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/sportsImage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/sports"
+        android:layout_margin="10dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/red"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/techImage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/tech"
+        app:civ_border_width="2dp"
+        android:layout_margin="10dp"
+
+        app:civ_border_color="@color/red"/>
+
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/paginationProgressBar"
+        style="?attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBreakingNews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hsv"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp" />
+
+
+</RelativeLayout>
